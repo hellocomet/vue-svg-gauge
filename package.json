@@ -1,0 +1,30 @@
+{
+  "name": "vue-svg-gauge",
+  "version": "1.0.0",
+  "description": "Customizable gauge component with gradients and animations for VueJs",
+  "main": "dist/vue-svg-gauge.js",
+  "repository": "https://github.com/hellocomet/vue-svg-gauge.git",
+  "author": "morgane <morgane@comet.co>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && webpack --config ./webpack.config.js"
+  },
+  "devDependencies": {
+    "@tweenjs/tween.js": "^17.3.0",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "babel-runtime": "^6.9.2",
+    "css-loader": "^0.25.0",
+    "rimraf": "^2.6.1",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^11.1.4",
+    "vue-style-loader": "^2.0.3",
+    "vue-template-compiler": "^2.2.1",
+    "vue": "^2.6.6",
+    "webpack-merge": "^4.1.0",
+    "webpack": "1.13.1"
+  }
+}
