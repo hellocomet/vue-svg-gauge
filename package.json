@@ -4,11 +4,26 @@
   "description": "Customizable gauge component with gradients and animations for VueJs",
   "main": "dist/vue-svg-gauge.js",
   "repository": "https://github.com/hellocomet/vue-svg-gauge.git",
-  "author": "morgane <morgane@comet.co>",
+  "bugs": {
+    "url": "https://github.com/hellocomet/vue-svg-gauge/issues"
+  },
+  "author": "Morguy <morgane.lecurieux.lafayette@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
+  "keywords": [
+    "vue-js",
+    "vuejs",
+    "gauge",
+    "custom-gauge",
+    "gauge-chart",
+    "gauge-chart",
+    "vue2-gauge",
+    "customizable-gauge",
+    "svg-gauge",
+    "vue-2"
+  ],
   "devDependencies": {
     "@tweenjs/tween.js": "^17.3.0",
     "babel-core": "^6.10.4",
