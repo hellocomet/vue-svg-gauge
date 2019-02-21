@@ -96,25 +96,31 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Gauge_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VueSvgGauge", function() { return _Gauge_vue__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.VueSvgGauge = undefined;
 
-const VueSvgGauge = {
-  install(Vue, options) {
-    Vue.component('vue-svg-gauge', _Gauge_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
-    Vue.component('VueSvgGauge', _Gauge_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+var _Gauge = __webpack_require__(1);
+
+var _Gauge2 = _interopRequireDefault(_Gauge);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var VueSvgGauge = {
+  install: function install(Vue, options) {
+    Vue.component('vue-svg-gauge', _Gauge2.default);
+    Vue.component('VueSvgGauge', _Gauge2.default);
   }
 };
 
-
-
-/* harmony default export */ __webpack_exports__["default"] = (VueSvgGauge);
+exports.VueSvgGauge = _Gauge2.default;
+exports.default = VueSvgGauge;
 
 /***/ }),
 /* 1 */
@@ -122,9 +128,10 @@ const VueSvgGauge = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
-/* empty/unused harmony star reexport *//* harmony import */ var _Gauge_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _Gauge_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61);
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(67);
 
 
@@ -136,8 +143,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -153,10 +160,10 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_5c517f41___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -168,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gauge"},[_vm._v("\n  toto\n  "),(_vm.height)?_c('svg',{attrs:{"viewBox":("0 0 " + (_vm.RADIUS * 2) + " " + _vm.height),"height":"100%","width":"100%","xmlns":"http://www.w3.org/2000/svg"}},[_c('defs',[_c('filter',{attrs:{"id":"innershadow"}},[_c('feFlood',{attrs:{"flood-color":"#c7c6c6"}}),_vm._v(" "),_c('feComposite',{attrs:{"in2":"SourceAlpha","operator":"out"}}),_vm._v(" "),_c('feGaussianBlur',{attrs:{"stdDeviation":"2","result":"blur"}}),_vm._v(" "),_c('feComposite',{attrs:{"operator":"atop","in2":"SourceGraphic"}})],1),_vm._v(" "),(_vm.hasGradient)?_c('linearGradient',{attrs:{"id":"gaugeGradient"}},_vm._l((_vm.gaugeColor),function(color,index){return _c('stop',{key:((color.color) + "-" + index),attrs:{"offset":((color.offset) + "%"),"stop-color":color.color}})}),1):_vm._e(),_vm._v(" "),_c('mask',{attrs:{"id":"innerCircle"}},[_c('circle',{attrs:{"r":_vm.RADIUS - 0.5,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"white"}}),_vm._v(" "),_c('circle',{attrs:{"r":_vm.innerRadius,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"black"}}),_vm._v(" "),(_vm.separatorPaths)?_vm._l((_vm.separatorPaths),function(separator,index){return _c('path',{key:index,attrs:{"d":separator,"fill":"black"}})}):_vm._e()],2)],1),_vm._v(" "),_c('g',{attrs:{"mask":"url(#innerCircle)"}},[(_vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}):_c('path',{attrs:{"d":_vm.basePath,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}),_vm._v(" "),(_vm.value === _vm.min && _vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.baseColor}}):_c('path',{attrs:{"d":_vm.gaugePath,"fill":_vm.baseColor,"filter":"url(#innershadow)"}})]),_vm._v(" "),(_vm.scaleLines)?_vm._l((_vm.scaleLines),function(line,index){return _c('line',{key:((line.xE) + "-" + index),attrs:{"x1":line.xS,"y1":line.yS,"x2":line.xE,"y2":line.yE,"stroke-width":"1","stroke":_vm.baseColor}})}):_vm._e(),_vm._v(" "),_c('foreignObject',{attrs:{"x":"0","y":"0","width":"100%","height":_vm.height}},[_vm._t("default")],2)],2):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gauge"},[(_vm.height)?_c('svg',{attrs:{"viewBox":("0 0 " + (_vm.RADIUS * 2) + " " + _vm.height),"height":"100%","width":"100%","xmlns":"http://www.w3.org/2000/svg"}},[_c('defs',[_c('filter',{attrs:{"id":"innershadow"}},[_c('feFlood',{attrs:{"flood-color":"#c7c6c6"}}),_vm._v(" "),_c('feComposite',{attrs:{"in2":"SourceAlpha","operator":"out"}}),_vm._v(" "),_c('feGaussianBlur',{attrs:{"stdDeviation":"2","result":"blur"}}),_vm._v(" "),_c('feComposite',{attrs:{"operator":"atop","in2":"SourceGraphic"}})],1),_vm._v(" "),(_vm.hasGradient)?_c('linearGradient',{attrs:{"id":"gaugeGradient"}},_vm._l((_vm.gaugeColor),function(color,index){return _c('stop',{key:((color.color) + "-" + index),attrs:{"offset":((color.offset) + "%"),"stop-color":color.color}})}),1):_vm._e(),_vm._v(" "),_c('mask',{attrs:{"id":"innerCircle"}},[_c('circle',{attrs:{"r":_vm.RADIUS - 0.5,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"white"}}),_vm._v(" "),_c('circle',{attrs:{"r":_vm.innerRadius,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"black"}}),_vm._v(" "),(_vm.separatorPaths)?_vm._l((_vm.separatorPaths),function(separator,index){return _c('path',{key:index,attrs:{"d":separator,"fill":"black"}})}):_vm._e()],2)],1),_vm._v(" "),_c('g',{attrs:{"mask":"url(#innerCircle)"}},[(_vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}):_c('path',{attrs:{"d":_vm.basePath,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}),_vm._v(" "),(_vm.value === _vm.min && _vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.baseColor}}):_c('path',{attrs:{"d":_vm.gaugePath,"fill":_vm.baseColor,"filter":"url(#innershadow)"}})]),_vm._v(" "),(_vm.scaleLines)?_vm._l((_vm.scaleLines),function(line,index){return _c('line',{key:((line.xE) + "-" + index),attrs:{"x1":line.xS,"y1":line.yS,"x2":line.xE,"y2":line.yE,"stroke-width":"1","stroke":_vm.baseColor}})}):_vm._e(),_vm._v(" "),_c('foreignObject',{attrs:{"x":"0","y":"0","width":"100%","height":_vm.height}},[_vm._t("default")],2)],2):_vm._e()])}
 var staticRenderFns = []
 
 
@@ -180,126 +187,38 @@ var staticRenderFns = []
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_1__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _tween = __webpack_require__(6);
 
-// Main radius of the gauge
-const RADIUS = 100;
+var _tween2 = _interopRequireDefault(_tween);
 
-// Coordinates of the center based on the radius
-const X_CENTER = 100;
-const Y_CENTER = 100;
+var _get2 = __webpack_require__(8);
 
-/**
- * Turn polar coordinate to cartesians
- * @param   {Number} centerX - abscisse of the center
- * @param   {Number} centerY - ordinate of the center
- * @param   {Number} radius  - radius of the circle
- * @param   {Number} angle   - angle in degres
- * @returns {String}         - d property of the path
- */
+var _get3 = _interopRequireDefault(_get2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RADIUS = 100;
+
+var X_CENTER = 100;
+var Y_CENTER = 100;
+
 function polarToCartesian(radius, angle) {
-  const angleInRadians = (angle - 90) * Math.PI / 180;
+  var angleInRadians = (angle - 90) * Math.PI / 180;
 
   return {
     x: X_CENTER + radius * Math.cos(angleInRadians),
@@ -307,152 +226,105 @@ function polarToCartesian(radius, angle) {
   };
 }
 
-/**
- * Describe a gauge path according
- * @param   {Number} radius
- * @param   {Number} startAngle - in degre
- * @param   {Number} endAngle   - in degre
- * @returns {String}            - d property of the path
- */
 function describePath(radius, startAngle, endAngle) {
-  const start = polarToCartesian(radius, endAngle);
-  const end = polarToCartesian(radius, startAngle);
+  var start = polarToCartesian(radius, endAngle);
+  var end = polarToCartesian(radius, startAngle);
 
-  const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
+  var largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
 
-  const d = ['M', start.x, start.y, 'A', radius, radius, 0, largeArcFlag, 0, end.x, end.y, 'L', X_CENTER, Y_CENTER].join(' ');
+  var d = ['M', start.x, start.y, 'A', radius, radius, 0, largeArcFlag, 0, end.x, end.y, 'L', X_CENTER, Y_CENTER].join(' ');
 
   return d;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+exports.default = {
   name: 'Gauge',
   props: {
-    /**
-     * Gauge value
-     */
     value: {
       type: Number,
       default: 70
     },
-    /**
-     * Gauge min value
-     */
+
     min: {
       type: Number,
       default: 0
     },
-    /**
-     * Gauge max value
-     */
+
     max: {
       type: Number,
       default: 100
     },
-    /**
-     * Must be between -360 and 360
-     * startAngle MUST be inferior to endAngle
-     */
+
     startAngle: {
       type: Number,
       default: -90,
-      validator: value => {
+      validator: function validator(value) {
         if (value < -360 || value > 360) {
           console.warn('GaugeChart - props "startAngle" must be between -360 and 360');
         }
         return true;
       }
     },
-    /**
-     * Must be between -360 and 360
-     * startAngle MUST be inferior to endAngle
-     */
+
     endAngle: {
       type: Number,
       default: 90,
-      validator: value => {
+      validator: function validator(value) {
         if (value < -360 || value > 360) {
           console.warn('GaugeChart - props "endAngle" must be between -360 and 360');
         }
         return true;
       }
     },
-    /**
-     * Size of the inner radius between 0 and RADIUS
-     * The closer to RADIUS, the thinner the gauge will be
-     */
+
     innerRadius: {
       type: Number,
       default: 60,
-      validator: value => {
+      validator: function validator(value) {
         if (value < 0 || value > 100) {
-          console.warn(`GaugeChart - props "innerRadius" must be between 0 and ${RADIUS}`);
+          console.warn('GaugeChart - props "innerRadius" must be between 0 and ' + RADIUS);
         }
         return true;
       }
     },
-    /**
-     * Separator step, will display a separator each min + (n * separatorStep)
-     * Won't display any separator if 0 or null
-     */
+
     separatorStep: {
       type: Number,
       default: 10,
-      validator: value => {
+      validator: function validator(value) {
         if (value !== null && value < 0) {
           console.warn('GaugeChart - props "separatorStep" must be null or >= 0');
         }
         return true;
       }
     },
-    /**
-     * Separator Thickness, unit is in degree
-     */
+
     separatorThickness: {
       type: Number,
       default: 4
     },
-    /**
-     * Gauge color. Can be :
-     * - a simple color if passed as a 'string'
-     * - a gradient if is an array of objects :
-     * { offset: percentage where the color starts, color: color to display }
-     */
+
     gaugeColor: {
       type: [Array, String],
-      default: () => [{ offset: 0, color: '#347AB0' }, { offset: 100, color: '#8CDFAD' }]
+      default: function _default() {
+        return [{ offset: 0, color: '#347AB0' }, { offset: 100, color: '#8CDFAD' }];
+      }
     },
-    /**
-     * Color of the base of the gauge
-     */
+
     baseColor: {
       type: String,
       default: '#DDDDDD'
     },
-    /**
-     * Animation easing option
-     * You can check the Tween.js doc here :
-     * https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md
-     *
-     * There are a few existing function gourped by equation they represent:
-     * Linear, Quadratic, Cubic, Quartic, Quintic, Sinusoidal, Exponential,
-     * Circular, Elastic, Back and Bounce
-     *
-     * And then by the easing type: In, Out and InOut.
-     * The syntaxe is : equation.easingType
-     */
+
     easing: {
       type: String,
       default: 'Circular.Out'
     },
-    /**
-     * Scale interval
-     * Won't display any scall if `null`
-     */
+
     scaleInterval: {
       type: Number,
       default: 5,
-      validator: value => {
+      validator: function validator(value) {
         if (value !== null && value < 0) {
           console.warn('GaugeChart - props "scaleInterval" must be null or >= 0');
         }
@@ -460,92 +332,74 @@ function describePath(radius, startAngle, endAngle) {
       }
     }
   },
-  data() {
+  data: function data() {
     return {
       X_CENTER: X_CENTER,
       Y_CENTER: Y_CENTER,
       RADIUS: RADIUS,
-      /**
-       * Tweened value for the animation of the gauge
-       * Starts at `min`
-       * @type {Number}
-       */
+
       tweenedValue: this.min
     };
   },
+
   computed: {
-    /**
-     * Height of the viewbox calculated by getting
-     * - the lower y between the center and the start and end angle
-     * - (RADIUS * 2) if one of the angle is bigger than 180°
-     * @type {Number}
-     */
-    height() {
-      const { endAngle, startAngle } = this;
-      const { y: yStart } = polarToCartesian(RADIUS, startAngle);
-      const { y: yEnd } = polarToCartesian(RADIUS, endAngle);
+    height: function height() {
+      var endAngle = this.endAngle,
+          startAngle = this.startAngle;
+
+      var _polarToCartesian = polarToCartesian(RADIUS, startAngle),
+          yStart = _polarToCartesian.y;
+
+      var _polarToCartesian2 = polarToCartesian(RADIUS, endAngle),
+          yEnd = _polarToCartesian2.y;
 
       return Math.abs(endAngle) <= 180 && Math.abs(startAngle) <= 180 ? Math.max(Y_CENTER, yStart, yEnd) : RADIUS * 2;
     },
-    /**
-     * d property of the path of the base gauge (the colored one)
-     * @type {String}
-     */
-    basePath() {
-      const { startAngle, endAngle } = this;
+    basePath: function basePath() {
+      var startAngle = this.startAngle,
+          endAngle = this.endAngle;
+
 
       return describePath(RADIUS, startAngle, endAngle);
     },
-    /**
-     * d property of the gauge according to the value.
-     * This gauge will hide a part of the base gauge
-     * @type {String}
-     */
-    gaugePath() {
-      const { endAngle, getAngle, tweenedValue } = this;
+    gaugePath: function gaugePath() {
+      var endAngle = this.endAngle,
+          getAngle = this.getAngle,
+          tweenedValue = this.tweenedValue;
+
 
       return describePath(RADIUS, getAngle(tweenedValue), endAngle);
     },
-    /**
-     * Total angle of the gauge
-     * @type {Number}
-     */
-    totalAngle() {
-      const { startAngle, endAngle } = this;
+    totalAngle: function totalAngle() {
+      var startAngle = this.startAngle,
+          endAngle = this.endAngle;
+
 
       return Math.abs(endAngle - startAngle);
     },
-    /**
-     * True if the gauge is a full circle
-     * @type {Boolean}
-     */
-    isCircle() {
+    isCircle: function isCircle() {
       return Math.abs(this.totalAngle) === 360;
     },
-    /**
-     * True if the gaugeColor is an array
-     * Result in displaying a gradient instead of a simple color
-     * @type {Boolean}
-     */
-    hasGradient() {
+    hasGradient: function hasGradient() {
       return Array.isArray(this.gaugeColor);
     },
-    /**
-     * Array of the path of each separator
-     */
-    separatorPaths() {
-      const {
-        separatorStep, getAngle, min, max, separatorThickness, isCircle
-      } = this;
+    separatorPaths: function separatorPaths() {
+      var separatorStep = this.separatorStep,
+          getAngle = this.getAngle,
+          min = this.min,
+          max = this.max,
+          separatorThickness = this.separatorThickness,
+          isCircle = this.isCircle;
+
 
       if (separatorStep > 0) {
-        const paths = [];
-        // If the gauge is a circle, this will add a separator at the start
-        let i = isCircle ? min : min + separatorStep;
+        var paths = [];
+
+        var i = isCircle ? min : min + separatorStep;
 
         for (i; i < max; i += separatorStep) {
-          const angle = getAngle(i);
-          const halfAngle = separatorThickness / 2;
+          var angle = getAngle(i);
+          var halfAngle = separatorThickness / 2;
 
           paths.push(describePath(RADIUS + 2, angle - halfAngle, angle + halfAngle));
         }
@@ -555,23 +409,24 @@ function describePath(radius, startAngle, endAngle) {
 
       return null;
     },
-    /**
-     * Array of line configuration for each scale
-     */
-    scaleLines() {
-      const {
-        scaleInterval, isCircle, min, max, getAngle, innerRadius
-      } = this;
+    scaleLines: function scaleLines() {
+      var scaleInterval = this.scaleInterval,
+          isCircle = this.isCircle,
+          min = this.min,
+          max = this.max,
+          getAngle = this.getAngle,
+          innerRadius = this.innerRadius;
+
 
       if (scaleInterval > 0) {
-        const lines = [];
-        // if gauge is a circle, remove the first scale
-        let i = isCircle ? min + scaleInterval : min;
+        var lines = [];
+
+        var i = isCircle ? min + scaleInterval : min;
 
         for (i; i < max + scaleInterval; i += scaleInterval) {
-          const angle = getAngle(i);
-          const startCoordinate = polarToCartesian(innerRadius - 4, angle);
-          const endCoordinate = polarToCartesian(innerRadius - 8, angle);
+          var angle = getAngle(i);
+          var startCoordinate = polarToCartesian(innerRadius - 4, angle);
+          var endCoordinate = polarToCartesian(innerRadius - 8, angle);
 
           lines.push({
             xS: startCoordinate.x,
@@ -588,22 +443,23 @@ function describePath(radius, startAngle, endAngle) {
     }
   },
   watch: {
-    /**
-     * Watch the value and tween it to make an animation
-     */
     value: {
       immediate: true,
-      handler(next) {
-        const { easing, tweenedValue } = this;
+      handler: function handler(next) {
+        var _this = this;
+
+        var easing = this.easing,
+            tweenedValue = this.tweenedValue;
+
 
         function animate() {
-          if (_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0___default.a.update()) {
+          if (_tween2.default.update()) {
             requestAnimationFrame(animate);
           }
         }
 
-        new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0___default.a.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: next }, 1500).easing(lodash_get__WEBPACK_IMPORTED_MODULE_1___default()(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_0___default.a.Easing, easing)).onUpdate(object => {
-          this.tweenedValue = object.tweeningValue;
+        new _tween2.default.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: next }, 1500).easing((0, _get3.default)(_tween2.default.Easing, easing)).onUpdate(function (object) {
+          _this.tweenedValue = object.tweeningValue;
         }).start();
 
         animate();
@@ -611,20 +467,18 @@ function describePath(radius, startAngle, endAngle) {
     }
   },
   methods: {
-    /**
-     * Get an angle for a value
-     * @param   {Number} value
-     * @returns {Number} angle - in degree
-     */
-    getAngle(value) {
-      const { min, max, startAngle, totalAngle } = this;
-      // Make sure not to divide by 0
-      const totalValue = max - min || 1;
+    getAngle: function getAngle(value) {
+      var min = this.min,
+          max = this.max,
+          startAngle = this.startAngle,
+          totalAngle = this.totalAngle;
+
+      var totalValue = max - min || 1;
 
       return value * totalAngle / totalValue + startAngle;
     }
   }
-});
+};
 
 /***/ }),
 /* 6 */
