@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <VueSvgGauge
+    Coucou le loup
+    <Gauge
       :start-angle="-110"
       :end-angle="110"
       :value="3"
@@ -14,17 +15,15 @@
 </template>
 
 <script>
+  import Gauge from '../src/components/Gauge.vue'
 
-export default {
-  name: 'app',
-}
+  export default {
+    name: 'app',
+    components: {
+      Gauge
+    },
+  }
 </script>
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+
+<style>
 </style>
