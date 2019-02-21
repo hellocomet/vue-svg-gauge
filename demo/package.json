@@ -2,9 +2,10 @@
   "name": "demo2",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --target lib --name demo"
   },
   "dependencies": {
     "vue": "^2.6.6"
