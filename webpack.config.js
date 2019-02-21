@@ -1,13 +1,18 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 var config = {
-  mode: 'production',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname + '/dist/'),
   },
+  plugins: [
+    new VueLoaderPlugin()
+  ],
   module: {
     rules: [
       {
@@ -22,28 +27,16 @@ var config = {
       },
       {
         test: /\.css$/,
-        loader: 'style!less!css'
+        use: ['css-loader'],
       }
     ]
   },
   externals: {
     vue: 'vue'
-  },
-  optimization: {
-    minimizer: [
-      // we specify a custom UglifyJsPlugin here to get source maps in production
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        uglifyOptions: {
-          compress: false,
-          ecma: 6,
-          mangle: true
-        },
-        sourceMap: true
-      })
-    ]
   }
+  // optimization: {
+  //   minimizer: [new TerserPlugin()],
+  // },
 };
 
 

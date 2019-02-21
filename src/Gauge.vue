@@ -272,13 +272,11 @@
         },
       },
     },
-    constants: {
-      X_CENTER,
-      Y_CENTER,
-      RADIUS,
-    },
     data() {
       return {
+        X_CENTER: X_CENTER,
+        Y_CENTER: Y_CENTER,
+        RADIUS: RADIUS,
         /**
          * Tweened value for the animation of the gauge
          * Starts at `min`
@@ -348,7 +346,6 @@
       },
       /**
        * Array of the path of each separator
-       * @type {?Array.<String>}
        */
       separatorPaths() {
         const {
@@ -374,7 +371,6 @@
       },
       /**
        * Array of line configuration for each scale
-       * @type {?Array.<Object>}
        */
       scaleLines() {
         const {

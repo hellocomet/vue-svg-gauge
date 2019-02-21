@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-
     <VueSvgGauge
       :start-angle="-110"
       :end-angle="110"
@@ -17,15 +14,9 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-// import VueSvgGauge from 'VueSvgGauge'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld,
-    // VueSvgGauge,
-  }
 }
 </script>
 <style lang="stylus">
