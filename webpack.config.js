@@ -1,61 +1,85 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
 const path = require('path')
+const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
+const VERSION = require('./package.json').version
+const PRODUCTION = process.env.NODE_ENV === 'production'
+
 var config = {
-  mode: 'development',
+  mode: PRODUCTION
+    ? 'production'
+    : 'none',
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    path: path.resolve(__dirname + '/dist/'),
-  },
-  plugins: [
-    new VueLoaderPlugin()
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: __dirname,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      },
-      {
-        test: /\.css$/,
-        use: ['css-loader'],
-      }
-    ]
+    path: path.resolve(__dirname, './dist/'),
+    filename: PRODUCTION
+      ? 'vue-svg-gauge.min.js'
+      : 'vue-svg-gauge.js',
+    library: 'VueSvgGauge',
+    libraryExport: 'default',
+    libraryTarget: 'umd'
   },
   externals: {
     vue: 'vue'
-  }
-  // optimization: {
-  //   minimizer: [new TerserPlugin()],
-  // },
-};
+  },
+  resolve: {
+    modules: [
+      path.join(__dirname, '.'),
+      path.join(__dirname, '.', 'node_modules')
+    ],
+    alias: {
+      src: 'src',
+      vue$: 'vue/dist/vue.common.js'
+    },
+    extensions: ['.js', '.vue']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          css: ['vue-style-loader', 'css-loader']
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ['vue-style-loader', 'css-loader']
+      }
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin(),
+  ]
+}
 
-
-module.exports = [
-  merge(config, {
-    entry: path.resolve(__dirname + '/src/plugin.js'),
-    output: {
-      filename: 'vue-svg-gauge.min.js',
-      libraryTarget: 'window',
-      library: 'VueSvgGauge',
-    }
+config.plugins = config.plugins.concat([
+  new webpack.LoaderOptionsPlugin({
+    minimize: true
   }),
-  merge(config, {
-    entry: path.resolve(__dirname + '/src/Gauge.vue'),
-    output: {
-      filename: 'vue-svg-gauge.js',
-      libraryTarget: 'umd',
-      library: 'vue-svg-gauge',
-      umdNamedDefine: true
-    }
+  new webpack.DefinePlugin({
+    VERSION: JSON.stringify(VERSION)
   })
-];
+])
+
+if (PRODUCTION) {
+  config.optimization = {
+    minimizer: [
+      new TerserPlugin()
+    ]
+  }
+
+  config.plugins = config.plugins.concat([
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+  ])
+}
+
+module.exports = config

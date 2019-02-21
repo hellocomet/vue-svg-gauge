@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name demo"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-svg-gauge": "file:../"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
