@@ -40,4 +40,4 @@ Once installed, it can be user in any template as
 Value of the gauge, must be contained between *min* and *max*.
 If not, it will be set to min.
 
-Demo site will be [here](https://hellocomet.github.io/vue-svg-gauge/)
+Demo site will be [here](https://hellocomet.github.io/vue-svg-gauge/dist/index.html)
