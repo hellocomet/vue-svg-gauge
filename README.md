@@ -1,23 +1,71 @@
 # vue-svg-gauge
 An easy configurable gauge for VueJS
 
+## Demo
+You can find a demo [here](https://hellocomet.github.io/vue-svg-gauge/)
+
 ## Installation
 `npm i --save-dev vue-svg-gauge`
 
 `yarn add -D vue-svg-gauge`
 
-### Browser
-```js
-<script type="text/javascript" src="node_modules/vue-svg-gauge/dist/vue-svg-gauge.min.js"></script>
+## Import
 
-<script type="text/javascript">
-  Vue.use(VueSvgGauge);
-</script>
+### ES6
+The following examples can also be used with CommonJS by replacing ES6-specific syntax with CommonJS equivalents.
+
+```js
+import Vue from 'vue'
+import { VueSvgGauge } from 'vue-svg-gauge'
+
+new Vue({
+  components: {
+    VueSvgGauge,
+  }
+})
 ```
 
-### Module
+### Globals (script tag)
+Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
+
+```html
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    <div id="app">
+      <vue-simple-spinner></vue-simple-spinner>
+    </div>
+
+    <script src="path/to/vue.js"></script>
+    <script src="node_modules/vue-svg-gauge/dist/vue-svg-gauge.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app'
+      })
+    </script>
+  </body>
+</html>
+```
+
+### Globals as a pluggin
 ```js
+import Vue from 'vue'
+import App from './App.vue'
 import VueSvgGauge from 'vue-svg-gauge'
+
+Vue.use(VueSvgGauge)
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+
+```
+
+### Directly from your components
+```js
+import { VueSvgGauge } from 'vue-svg-gauge'
 ```
 
 ## Usage
@@ -33,11 +81,36 @@ Once installed, it can be user in any template as
   :gauge-color="[{ offset: 0, color: '#347AB0'}, { offset: 100, color: '#8CDFAD'}]"
   :scale-interval="0.1"
 />
+<!--  or  -->
+<vue-svg-gauge
+  :start-angle="-110"
+  :end-angle="110"
+  :value="3"
+  :separator-step="1"
+  :min="0"
+  :max="4"
+  :gauge-color="[{ offset: 0, color: '#347AB0'}, { offset: 100, color: '#8CDFAD'}]"
+  :scale-interval="0.1"
+/>
 ```
 
 ## Props
-### value
-Value of the gauge, must be contained between *min* and *max*.
-If not, it will be set to min.
 
-Demo site will be [here](https://hellocomet.github.io/vue-svg-gauge/dist/index.html)
+| Props | Type | Value | Default |
+|---|---|---|---|
+| value | Number | Value of the gauge, must be contained between *min* and *max*. If not, it will be set to min if inferior, or max if superior | 70 |
+| min | Number | Minimum value reachable | 0 |
+| max | Number | Maximum value reachable | 100 |
+| startAngle | Number | Start angle of the gauge. Can go from -360° to 360° but must be smaller than endAngle | -90 |
+| endAngle | Number | End angle of the gauge. Can go from -360° to 360° but must be greater than startAngle | 90 |
+| innerRadius | Number | inner radius that will determine the thickness of the gauge | 60 |
+| separatorStep | Number | Number of steps between each separator (will display a separator each min + (n * separatorStep)). Won't display any if 0 or null | 10 |
+| separatorThickness | Number | Thickness of the separators, unit is in degree | 4 |
+| gaugeColor | String,Array | Color of the gauge, can either be a simple color or a gradient | [{ offset: 0, color: '#347AB0' }, { offset: 100, color: '#8CDFAD' }] |
+| baseColor | String | Color of the empty gauge | #DDDDDD |
+| scaleInterval | Number | Interval between the scale line, based on min and max. Won't display any if 0 or null | 5 |
+| easing | String | Animation easing option | Circular.Out |
+
+_Notes_ :
+- the reference angle is 0 on top of the gauge.
+- The animation librabry used is *tweenJs*, you can find the documentation about the different functions [here](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md)

@@ -259,7 +259,7 @@
       },
       /**
        * Scale interval
-       * Won't display any scall if `null`
+       * Won't display any scall if 0 or `null`
        */
       scaleInterval: {
         type: Number,
@@ -404,11 +404,22 @@
     watch: {
       /**
        * Watch the value and tween it to make an animation
+       * If value < min, used value will be min
+       * If value > max, used value will be max
        */
       value: {
         immediate: true,
         handler(next) {
-          const { easing, tweenedValue } = this
+          const { easing, tweenedValue, min, max } = this
+          let safeValue = next
+
+          if (next < min) {
+            safeValue = min
+          }
+
+          if (next > max) {
+            safeValue = max
+          }
 
           function animate() {
             if (TWEEN.update()) {
@@ -417,7 +428,7 @@
           }
 
           new TWEEN.Tween({ tweeningValue: tweenedValue })
-            .to({ tweeningValue: next }, 1500)
+            .to({ tweeningValue: safeValue }, 1500)
             .easing(_get(TWEEN.Easing, easing))
             .onUpdate((object) => {
               this.tweenedValue = object.tweeningValue
