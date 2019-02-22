@@ -1,5 +1,5 @@
 # vue-svg-gauge
-An easy configurable gauge for VueJS
+An easily customizable gauge for VueJS with gradients and animations
 
 ## Demo
 You can find a demo [here](https://hellocomet.github.io/vue-svg-gauge/)
@@ -35,7 +35,7 @@ Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
   </head>
   <body>
     <div id="app">
-      <vue-simple-spinner></vue-simple-spinner>
+      <vue-svg-gauge></vue-svg-gauge>
     </div>
 
     <script src="path/to/vue.js"></script>
@@ -86,10 +86,10 @@ Once installed, it can be user in any template as
   :start-angle="-110"
   :end-angle="110"
   :value="3"
-  :separator-step="1"
+  :separator-step="0"
   :min="0"
-  :max="4"
-  :gauge-color="[{ offset: 0, color: '#347AB0'}, { offset: 100, color: '#8CDFAD'}]"
+  :max="10"
+  gauge-color="#8CDFAD"
   :scale-interval="0.1"
 />
 ```
@@ -113,4 +113,44 @@ Once installed, it can be user in any template as
 
 _Notes_ :
 - the reference angle is 0 on top of the gauge.
-- The animation librabry used is *tweenJs*, you can find the documentation about the different functions [here](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md)
+- you can find the documentation about the different animation functions [here](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md)
+
+## Slot
+There is a main _slot_ allowing you to display any kind of html you want in your gauge.
+
+### Example
+```html
+<VueSvgGauge
+  :start-angle="-110"
+  :end-angle="110"
+  :value="random"
+  :separator-step="20"
+  :scale-interval="10"
+  :inner-radius="80"
+>
+  <div class="inner-text">
+    <span>Let's make this <b>fun</b> !</span>
+  </div>
+</VueSvgGauge>
+```
+
+```css
+.inner-text {
+  // allow the text to take all the available space in the svg on top of the gauge
+  height: 100%;
+  width: 100%;
+
+  span {
+    max-width: 100px;
+    color: red;
+    // ...
+  }
+}
+```
+
+## Dependencies
+You will need to install ```vue ~2.5.22``` to use this package properly
+
+Also vue-svg-gauge relates on the libraby [**tweenJs**](https://github.com/tweenjs/tween.js/) for the animations.
+
+Made with ❤️ at [**comet**](https://comet.co/)
