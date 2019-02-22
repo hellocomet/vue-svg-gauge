@@ -7,7 +7,7 @@
     >
       <defs>
         <!-- This puts an inner shadow on the empty part of gauge -->
-        <filter id="innershadow">
+        <filter :id="`innershadow-${_uid}`">
           <feFlood flood-color="#c7c6c6" />
           <feComposite in2="SourceAlpha" operator="out" />
           <feGaussianBlur stdDeviation="2" result="blur" />
@@ -17,7 +17,7 @@
         <!-- Determine the gradient color on the full part of the gauge -->
         <linearGradient
           v-if="hasGradient"
-          id="gaugeGradient"
+          :id="`gaugeGradient-${_uid}`"
         >
           <stop
             v-for="(color, index) in gaugeColor"
@@ -26,7 +26,7 @@
           />
         </linearGradient>
 
-        <mask id="innerCircle">
+        <mask :id="`innerCircle-${_uid}`">
           <!-- Mask to make sure only the part inside the circle is visible -->
           <!-- RADIUS - 0.5 to avoid any weird display -->
           <circle :r="RADIUS - 0.5" :cx="X_CENTER" :cy="Y_CENTER" fill="white" />
@@ -45,16 +45,16 @@
         </mask>
       </defs>
 
-      <g mask="url(#innerCircle)">
+      <g :mask="`url(#innerCircle-${_uid})`">
         <!-- Draw a circle if the full gauge has a 360° angle, otherwise draw a path -->
         <circle
           v-if="isCircle"
           :r="RADIUS" :cx="X_CENTER" :cy="Y_CENTER"
-          :fill="hasGradient ? 'url(#gaugeGradient)' : gaugeColor"
+          :fill="hasGradient ? `url(#gaugeGradient-${_uid})` : gaugeColor"
         />
         <path
           v-else
-          :d="basePath" :fill="hasGradient ? 'url(#gaugeGradient)' : gaugeColor"
+          :d="basePath" :fill="hasGradient ? `url(#gaugeGradient-${_uid})` : gaugeColor"
         />
 
         <!-- Draw a circle if the empty gauge has a 360° angle, otherwise draw a path -->
@@ -63,7 +63,7 @@
           :r="RADIUS" :cx="X_CENTER" :cy="Y_CENTER"
           :fill="baseColor"
         />
-        <path v-else :d="gaugePath" :fill="baseColor" filter="url(#innershadow)" />
+        <path v-else :d="gaugePath" :fill="baseColor" :filter="`url(#innershadow-${_uid})`" />
       </g>
 
       <template v-if="scaleLines">
