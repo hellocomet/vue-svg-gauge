@@ -128,7 +128,7 @@ exports.default = VueSvgGauge;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _Gauge_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61);
@@ -143,8 +143,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -160,10 +160,10 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_c9dd752a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gauge"},[(_vm.height)?_c('svg',{attrs:{"viewBox":("0 0 " + (_vm.RADIUS * 2) + " " + _vm.height),"height":"100%","width":"100%","xmlns":"http://www.w3.org/2000/svg"}},[_c('defs',[_c('filter',{attrs:{"id":"innershadow"}},[_c('feFlood',{attrs:{"flood-color":"#c7c6c6"}}),_vm._v(" "),_c('feComposite',{attrs:{"in2":"SourceAlpha","operator":"out"}}),_vm._v(" "),_c('feGaussianBlur',{attrs:{"stdDeviation":"2","result":"blur"}}),_vm._v(" "),_c('feComposite',{attrs:{"operator":"atop","in2":"SourceGraphic"}})],1),_vm._v(" "),(_vm.hasGradient)?_c('linearGradient',{attrs:{"id":"gaugeGradient"}},_vm._l((_vm.gaugeColor),function(color,index){return _c('stop',{key:((color.color) + "-" + index),attrs:{"offset":((color.offset) + "%"),"stop-color":color.color}})}),1):_vm._e(),_vm._v(" "),_c('mask',{attrs:{"id":"innerCircle"}},[_c('circle',{attrs:{"r":_vm.RADIUS - 0.5,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"white"}}),_vm._v(" "),_c('circle',{attrs:{"r":_vm.innerRadius,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"black"}}),_vm._v(" "),(_vm.separatorPaths)?_vm._l((_vm.separatorPaths),function(separator,index){return _c('path',{key:index,attrs:{"d":separator,"fill":"black"}})}):_vm._e()],2)],1),_vm._v(" "),_c('g',{attrs:{"mask":"url(#innerCircle)"}},[(_vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}):_c('path',{attrs:{"d":_vm.basePath,"fill":_vm.hasGradient ? 'url(#gaugeGradient)' : _vm.gaugeColor}}),_vm._v(" "),(_vm.value === _vm.min && _vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.baseColor}}):_c('path',{attrs:{"d":_vm.gaugePath,"fill":_vm.baseColor,"filter":"url(#innershadow)"}})]),_vm._v(" "),(_vm.scaleLines)?_vm._l((_vm.scaleLines),function(line,index){return _c('line',{key:((line.xE) + "-" + index),attrs:{"x1":line.xS,"y1":line.yS,"x2":line.xE,"y2":line.yE,"stroke-width":"1","stroke":_vm.baseColor}})}):_vm._e(),_vm._v(" "),_c('foreignObject',{attrs:{"x":"0","y":"0","width":"100%","height":_vm.height}},[_vm._t("default")],2)],2):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"gauge"},[(_vm.height)?_c('svg',{attrs:{"viewBox":("0 0 " + (_vm.RADIUS * 2) + " " + _vm.height),"height":"100%","width":"100%","xmlns":"http://www.w3.org/2000/svg"}},[_c('defs',[_c('filter',{attrs:{"id":("innershadow-" + _vm._uid)}},[_c('feFlood',{attrs:{"flood-color":"#c7c6c6"}}),_vm._v(" "),_c('feComposite',{attrs:{"in2":"SourceAlpha","operator":"out"}}),_vm._v(" "),_c('feGaussianBlur',{attrs:{"stdDeviation":"2","result":"blur"}}),_vm._v(" "),_c('feComposite',{attrs:{"operator":"atop","in2":"SourceGraphic"}})],1),_vm._v(" "),(_vm.hasGradient)?_c('linearGradient',{attrs:{"id":("gaugeGradient-" + _vm._uid)}},_vm._l((_vm.gaugeColor),function(color,index){return _c('stop',{key:((color.color) + "-" + index),attrs:{"offset":((color.offset) + "%"),"stop-color":color.color}})}),1):_vm._e(),_vm._v(" "),_c('mask',{attrs:{"id":("innerCircle-" + _vm._uid)}},[_c('circle',{attrs:{"r":_vm.RADIUS - 0.5,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"white"}}),_vm._v(" "),_c('circle',{attrs:{"r":_vm.innerRadius,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":"black"}}),_vm._v(" "),(_vm.separatorPaths)?_vm._l((_vm.separatorPaths),function(separator,index){return _c('path',{key:index,attrs:{"d":separator,"fill":"black"}})}):_vm._e()],2)],1),_vm._v(" "),_c('g',{attrs:{"mask":("url(#innerCircle-" + _vm._uid + ")")}},[(_vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.hasGradient ? ("url(#gaugeGradient-" + _vm._uid + ")") : _vm.gaugeColor}}):_c('path',{attrs:{"d":_vm.basePath,"fill":_vm.hasGradient ? ("url(#gaugeGradient-" + _vm._uid + ")") : _vm.gaugeColor}}),_vm._v(" "),(_vm.value === _vm.min && _vm.isCircle)?_c('circle',{attrs:{"r":_vm.RADIUS,"cx":_vm.X_CENTER,"cy":_vm.Y_CENTER,"fill":_vm.baseColor}}):_c('path',{attrs:{"d":_vm.gaugePath,"fill":_vm.baseColor,"filter":("url(#innershadow-" + _vm._uid + ")")}})]),_vm._v(" "),(_vm.scaleLines)?_vm._l((_vm.scaleLines),function(line,index){return _c('line',{key:((line.xE) + "-" + index),attrs:{"x1":line.xS,"y1":line.yS,"x2":line.xE,"y2":line.yE,"stroke-width":"1","stroke":_vm.baseColor}})}):_vm._e(),_vm._v(" "),_c('foreignObject',{attrs:{"x":"0","y":"0","width":"100%","height":_vm.height}},[_vm._t("default")],2)],2):_vm._e()])}
 var staticRenderFns = []
 
 
@@ -449,8 +449,19 @@ exports.default = {
         var _this = this;
 
         var easing = this.easing,
-            tweenedValue = this.tweenedValue;
+            tweenedValue = this.tweenedValue,
+            min = this.min,
+            max = this.max;
 
+        var safeValue = next;
+
+        if (next < min) {
+          safeValue = min;
+        }
+
+        if (next > max) {
+          safeValue = max;
+        }
 
         function animate() {
           if (_tween2.default.update()) {
@@ -458,7 +469,7 @@ exports.default = {
           }
         }
 
-        new _tween2.default.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: next }, 1500).easing((0, _get3.default)(_tween2.default.Easing, easing)).onUpdate(function (object) {
+        new _tween2.default.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: safeValue }, 1500).easing((0, _get3.default)(_tween2.default.Easing, easing)).onUpdate(function (object) {
           _this.tweenedValue = object.tweeningValue;
         }).start();
 
