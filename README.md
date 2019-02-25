@@ -151,6 +151,6 @@ There is a main _slot_ allowing you to display any kind of html you want in your
 ## Dependencies
 You will need to install ```vue ~2.5.22``` to use this package properly
 
-Also vue-svg-gauge relates on the libraby [**tweenJs**](https://github.com/tweenjs/tween.js/) for the animations.
+Also vue-svg-gauge relies on the [**tweenJs**](https://github.com/tweenjs/tween.js/) library for animations.
 
 Made with ❤️ at [**comet**](https://comet.co/)
