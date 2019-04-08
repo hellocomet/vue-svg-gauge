@@ -214,9 +214,10 @@
         if (random < 50) {
           return 'Pretty ok 😶'
         }
-        if (random > 75) {
-          return 'Super good 😄'
+        if (random < 75) {
+          return 'Gets nice 🙂'
         }
+        return 'Super good 😄'
       }
     },
     /**

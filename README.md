@@ -63,11 +63,6 @@ new Vue({
 
 ```
 
-### Directly from your components
-```js
-import { VueSvgGauge } from 'vue-svg-gauge'
-```
-
 ## Usage
 Once installed, it can be user in any template as
 ```html
