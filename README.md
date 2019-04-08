@@ -25,6 +25,20 @@ new Vue({
 })
 ```
 
+### Globals as a pluggin
+```js
+import Vue from 'vue'
+import App from './App.vue'
+import VueSvgGauge from 'vue-svg-gauge'
+
+Vue.use(VueSvgGauge)
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+
+```
+
 ### Globals (script tag)
 Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
 
@@ -47,20 +61,6 @@ Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
     </script>
   </body>
 </html>
-```
-
-### Globals as a pluggin
-```js
-import Vue from 'vue'
-import App from './App.vue'
-import VueSvgGauge from 'vue-svg-gauge'
-
-Vue.use(VueSvgGauge)
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
-
 ```
 
 ## Usage

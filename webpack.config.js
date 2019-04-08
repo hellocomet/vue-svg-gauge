@@ -17,7 +17,6 @@ var config = {
       ? 'vue-svg-gauge.min.js'
       : 'vue-svg-gauge.js',
     library: 'VueSvgGauge',
-    libraryExport: 'default',
     libraryTarget: 'umd'
   },
   externals: {

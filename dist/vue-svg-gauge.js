@@ -3673,5 +3673,5 @@ function normalizeComponent (
 
 
 /***/ })
-/******/ ])["default"];
+/******/ ]);
 });
