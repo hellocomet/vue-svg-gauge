@@ -5,7 +5,7 @@ An easily customizable gauge for VueJS with gradients and animations
 You can find a demo [here](https://hellocomet.github.io/vue-svg-gauge/)
 
 ## Installation
-`npm i --save-dev vue-svg-gauge`
+`npm i vue-svg-gauge --save`
 
 `yarn add -D vue-svg-gauge`
 
@@ -39,7 +39,7 @@ new Vue({
 
 ```
 
-### Globals (script tag)
+### Globals (via <script> tag)
 Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
 
 ```html
@@ -53,7 +53,7 @@ Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
     </div>
 
     <script src="path/to/vue.js"></script>
-    <script src="node_modules/vue-svg-gauge/dist/vue-svg-gauge.min.js"></script>
+    <script src="path/to/dist/vue-svg-gauge.min.js"></script>
     <script>
       new Vue({
         el: '#app'
