@@ -6066,7 +6066,7 @@ vue-style-loader@^4.1.0:
     loader-utils "^1.0.2"
 
 "vue-svg-gauge@file:..":
-  version "1.0.0"
+  version "1.0.1"
   dependencies:
     "@tweenjs/tween.js" "^17.3.0"
 
