@@ -271,6 +271,13 @@
           return true
         },
       },
+      /**
+       * Transition duration in ms
+       */
+      transitionDuration: {
+        type: Number,
+        default: 1500,
+      },
     },
     data() {
       return {
@@ -410,7 +417,7 @@
       value: {
         immediate: true,
         handler(next) {
-          const { easing, tweenedValue, min, max } = this
+          const { easing, tweenedValue, min, max, transitionDuration } = this
           let safeValue = next
 
           if (next < min) {
@@ -428,7 +435,7 @@
           }
 
           new TWEEN.Tween({ tweeningValue: tweenedValue })
-            .to({ tweeningValue: safeValue }, 1500)
+            .to({ tweeningValue: safeValue }, transitionDuration)
             .easing(_get(TWEEN.Easing, easing))
             .onUpdate((object) => {
               this.tweenedValue = object.tweeningValue
