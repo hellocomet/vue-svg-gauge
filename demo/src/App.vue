@@ -22,6 +22,7 @@
           :inner-radius="55"
           :easing="easing"
           base-color="#d0cdcd"
+          :transition-duration="3500"
         >
           <div class="inner-text inner-text--1">
             <span>Single color</span>
