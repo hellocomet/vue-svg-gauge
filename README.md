@@ -104,6 +104,7 @@ Once installed, it can be user in any template as
 | gaugeColor | String,Array | Color of the gauge, can either be a simple color or a gradient | [{ offset: 0, color: '#347AB0' }, { offset: 100, color: '#8CDFAD' }] |
 | baseColor | String | Color of the empty gauge | #DDDDDD |
 | scaleInterval | Number | Interval between the scale line, based on min and max. Won't display any if 0 or null | 5 |
+| transitionDuration | Number | Transition duration time in ms. If set to `0`, there will be no transition | 1500 |
 | easing | String | Animation easing option | Circular.Out |
 
 _Notes_ :

@@ -167,7 +167,7 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _Gauge_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61);
@@ -182,8 +182,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Gauge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -199,10 +199,10 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_8b64e198___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gauge_vue_vue_type_template_id_0fd7afe6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -369,6 +369,11 @@ exports.default = {
         }
         return true;
       }
+    },
+
+    transitionDuration: {
+      type: Number,
+      default: 1500
     }
   },
   data: function data() {
@@ -490,7 +495,8 @@ exports.default = {
         var easing = this.easing,
             tweenedValue = this.tweenedValue,
             min = this.min,
-            max = this.max;
+            max = this.max,
+            transitionDuration = this.transitionDuration;
 
         var safeValue = next;
 
@@ -508,7 +514,7 @@ exports.default = {
           }
         }
 
-        new _tween2.default.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: safeValue }, 1500).easing((0, _get3.default)(_tween2.default.Easing, easing)).onUpdate(function (object) {
+        new _tween2.default.Tween({ tweeningValue: tweenedValue }).to({ tweeningValue: safeValue }, transitionDuration).easing((0, _get3.default)(_tween2.default.Easing, easing)).onUpdate(function (object) {
           _this.tweenedValue = object.tweeningValue;
         }).start();
 
