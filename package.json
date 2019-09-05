@@ -1,6 +1,6 @@
 {
   "name": "vue-svg-gauge",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Customizable gauge component with gradients and animations for VueJs",
   "author": "Morgane LECURIEUX <morgane.lecurieux.lafayette@gmail.com>",
   "main": "dist/vue-svg-gauge.js",
