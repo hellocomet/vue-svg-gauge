@@ -39,7 +39,7 @@ new Vue({
 
 ```
 
-### Globals (via <script> tag)
+### Globals (via the script tag)
 Add a script tag pointing to _dist/vue-svg-gauge.min.js_ after adding Vue.
 
 ```html
