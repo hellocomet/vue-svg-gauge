@@ -169,6 +169,29 @@
             </div>
           </div>
         </div>
+
+        <!-- with inner content scope -->
+        <h3 class="general-title">With inner-content slot (can use &lt;text> for IE11 support) 👇</h3>
+
+        <VueSvgGauge
+          class="mini-gauge"
+          :start-angle="-90"
+          :end-angle="90"
+          :value="random"
+          :separator-step="0"
+          :gauge-color="[{ offset: 0, color: '#de3a21'}, { offset: 50, color: '#f4c009'} , { offset: 100, color: '#0b8c5a'}]"
+          :scale-interval="0"
+          :inner-radius="80"
+          :easing="easing"
+          base-color="#d0cdcd"
+        >
+          <template v-slot:inner-content="slotProps">
+            <text :x="slotProps.radius" :y="slotProps.radius * 0.95" font-weight="bold" text-anchor="middle" :font-size="slotProps.radius * 0.5" fill="#333">
+              {{ random }}
+            </text>
+          </template>
+        </VueSvgGauge>
+
       </div>
     </div>
 
@@ -229,7 +252,7 @@
       setInterval(() => {
         const min = 0
         const max = 100
-        this.random = Math.random() * (+max - +min) + +min;
+        this.random = Math.round( Math.random() * (+max - +min) + +min );
       }, 4000)
     }
   }
@@ -307,6 +330,10 @@
       .customizer-title {
         font-size: 20px
         margin: 10px 0 0 0
+      }
+      .general-title {
+        font-size: 16px
+        margin: 10px 0
       }
 
       .customizer {
