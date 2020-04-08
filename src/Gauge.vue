@@ -77,9 +77,15 @@
       </template>
 
       <!-- This allow to display html inside the svg -->
-      <foreignObject x="0" y="0" width="100%" :height="height">
-        <slot />
-      </foreignObject>
+      <template v-if="hasDefaultSlot">
+        <foreignObject x="0" y="0" width="100%" :height="height">
+          <slot />
+        </foreignObject>
+      </template>
+
+      <!-- User might want to include other bespoke svg siblings i.e. <text> -->
+      <slot name="inner-content" v-bind:radius="RADIUS" />
+
     </svg>
   </div>
 </template>
@@ -406,6 +412,9 @@
         }
 
         return null
+      },
+      hasDefaultSlot() {
+         return !!this.$slots['default'];
       },
     },
     watch: {
