@@ -103,6 +103,7 @@ Once installed, it can be user in any template as
 | separatorThickness | Number | Thickness of the separators, unit is in degree | 4 |
 | gaugeColor | String,Array | Color of the gauge, can either be a simple color or a gradient | [{ offset: 0, color: '#347AB0' }, { offset: 100, color: '#8CDFAD' }] |
 | baseColor | String | Color of the empty gauge | #DDDDDD |
+| blurColor | String | Color of the blur of the gauge | #c7c6c6 |
 | scaleInterval | Number | Interval between the scale line, based on min and max. Won't display any if 0 or null | 5 |
 | transitionDuration | Number | Transition duration time in ms. If set to `0`, there will be no transition | 1500 |
 | easing | String | Animation easing option | Circular.Out |

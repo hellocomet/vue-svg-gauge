@@ -8,7 +8,7 @@
       <defs>
         <!-- This puts an inner shadow on the empty part of gauge -->
         <filter :id="`innershadow-${_uid}`">
-          <feFlood flood-color="#c7c6c6" />
+          <feFlood :flood-color="blurColor" />
           <feComposite in2="SourceAlpha" operator="out" />
           <feGaussianBlur stdDeviation="2" result="blur" />
           <feComposite operator="atop" in2="SourceGraphic" />
@@ -240,6 +240,13 @@
       baseColor: {
         type: String,
         default: '#DDDDDD',
+      },
+      /**
+       * Color of the blur of the gauge
+       */
+      blurColor: {
+        type: String,
+        default: '#c7c6c6',
       },
       /**
        * Animation easing option
